@@ -8,3 +8,7 @@ btn.innerHTML = sound.charAt(0).toUpperCase() + sound.slice(1)
 btn.setAttribute('onclick',`playEffect('${sound}')`)
 btns.appendChild(btn)
 })
+function playEffect(name) {
+audio.src = `./public/assets/audio/${name}.mp3`
+audio.play()
+}
